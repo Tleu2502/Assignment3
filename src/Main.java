@@ -13,6 +13,14 @@ public class Main {
         System.out.println("Sorted array:");
         sorter.printArray(array);
 
+        int[] array100 = sorter.generateRandomArray(100);
+        System.out.println("Random array 100:");
+        sorter.printArray(array100);
+        sorter.basicSort(array100);
+        System.out.println("Sorted array 100:");
+        sorter.printArray(array100);
+
+
         System.out.println();
         experiment.runAllExperiments();
     }
