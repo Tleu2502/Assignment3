@@ -23,7 +23,7 @@ public class Experiment {
     }
 
     public void runAllExperiments() {
-        int[] sizes = {10, 101, 1000};
+        int[] sizes = {10, 100, 1000};
 
         for (int i = 0; i < sizes.length; i++) {
             int size = sizes[i];
