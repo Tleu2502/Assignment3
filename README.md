@@ -12,6 +12,11 @@ Binary sort
 Resuslt
 <img width="1766" height="726" alt="image" src="https://github.com/user-attachments/assets/7ba7296c-f586-45e8-97ee-8322e2d11d39" />
 
+Merge Sort is much faster than Bubble Sort on big arrays.
+Bubble Sort is simple but gets very slow when array is large.
+Binary Search is extremely fast but only works on sorted arrays.
+The bigger the array, the bigger the difference between algorithms.
+
 
 
 
