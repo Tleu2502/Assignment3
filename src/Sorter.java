@@ -14,30 +14,40 @@ public class Sorter {
             }
         }
     }
-
     public void advancedSort(int[] arr) {
         int n = arr.length;
-        for (int width = 1; width < n; width *= 2) {
-            for (int i = 0; i < n; i += 2 * width) {
-                int left = i;
-                int mid = Math.min(i + width - 1, n - 1);
-                int right = Math.min(i + 2 * width - 1, n - 1);
-                if (mid < right) {
-                    int n1 = mid - left + 1;
-                    int n2 = right - mid;
-                    int[] L = new int[n1];
-                    int[] R = new int[n2];
-                    for (int a = 0; a < n1; a++) L[a] = arr[left + a];
-                    for (int b = 0; b < n2; b++) R[b] = arr[mid + 1 + b];
-                    int a = 0, b = 0, k = left;
-                    while (a < n1 && b < n2) {
-                        if (L[a] <= R[b]) arr[k++] = L[a++];
-                        else arr[k++] = R[b++];
-                    }
-                    while (a < n1) arr[k++] = L[a++];
-                    while (b < n2) arr[k++] = R[b++];
-                }
+        if (n <= 1) {
+            return;
+        }
+
+        int mid = n / 2;
+
+        int[] left = new int[mid];
+        int[] right = new int[n - mid];
+
+        for (int i = 0; i < mid; i++) {
+            left[i] = arr[i];
+        }
+        for (int i = mid; i < n; i++) {
+            right[i - mid] = arr[i];
+        }
+
+        advancedSort(left);
+        advancedSort(right);
+
+        int i = 0, j = 0, k = 0;
+        while (i < left.length && j < right.length) {
+            if (left[i] <= right[j]) {
+                arr[k++] = left[i++];
+            } else {
+                arr[k++] = right[j++];
             }
+        }
+        while (i < left.length) {
+            arr[k++] = left[i++];
+        }
+        while (j < right.length) {
+            arr[k++] = right[j++];
         }
     }
 
