@@ -19,11 +19,12 @@ Bubble Sort is simple but gets very slow when array is large.
 Binary Search is extremely fast but only works on sorted arrays.
 The bigger the array, the bigger the difference between algorithms.
 
- Size  Bubble Sort  Merge Sort  Binary Search 
+ Size   Bubble Sort     Merge Sort     Binary Search 
+ 10     5000 ns         3000 ns        500 ns       
+ 100    50000 ns        20000 ns       800 ns       
+ 1000   5000000 ns      200000 ns      1000 ns 
 
- 10    5000 ns     3000 ns    500 ns       
- 100   50000 ns   |20000 ns   800 ns       
- 1000  5000000 ns  200000 ns  1000 ns      
+ All this times is AVG of results
 
 
 
