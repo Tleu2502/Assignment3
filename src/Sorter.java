@@ -14,21 +14,20 @@ public class Sorter {
             }
         }
     }
+
     public void advancedSort(int[] arr) {
-        int n = arr.length;
-        if (n <= 1) {
+        if (arr.length <= 1) {
             return;
         }
 
-        int mid = n / 2;
-
+        int mid = arr.length / 2;
         int[] left = new int[mid];
-        int[] right = new int[n - mid];
+        int[] right = new int[arr.length - mid];
 
         for (int i = 0; i < mid; i++) {
             left[i] = arr[i];
         }
-        for (int i = mid; i < n; i++) {
+        for (int i = mid; i < arr.length; i++) {
             right[i - mid] = arr[i];
         }
 
@@ -50,7 +49,6 @@ public class Sorter {
             arr[k++] = right[j++];
         }
     }
-
     public void printArray(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i]);
