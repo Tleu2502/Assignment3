@@ -21,9 +21,9 @@ The bigger the array, the bigger the difference between algorithms.
 
 | Size | Bubble Sort | Merge Sort | Binary Search |
 |------|-------------|------------|---------------|
-| 10   | 5000 ns     | 3000 ns    | 500 ns        |
-| 100  | 50000 ns    | 20000 ns   | 800 ns        |
-| 1000 | 5000000 ns  | 200000 ns  | 1000 ns       |
+| 10   | 5000        | 3000       | 500         |
+| 100  | 50000       | 20000      | 800         |
+| 1000 | 5000000     | 200000     | 1000        |
 
  All this times is AVG of results
 
