@@ -1,5 +1,7 @@
 Student: Zhumagali Tileukhan IT-2502
+
 Assigment 3
+
 Basic (Buble) sort
 <img width="684" height="358" alt="image" src="https://github.com/user-attachments/assets/48ed487f-38ef-4ff5-95fe-0c3e01a053ba" />
 
