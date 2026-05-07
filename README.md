@@ -1,10 +1,12 @@
 Student: Zhumagali Tileukhan IT-2502
 
 Assigment 4
+
 Task 1
 <img width="1013" height="512" alt="image" src="https://github.com/user-attachments/assets/265771eb-9137-49b5-a753-2122b911e5a0" />
 
 in this part we create main classes Vertex , Edge and Graph with Adjacency List.
+
 Task 2
 
 <img width="849" height="641" alt="image" src="https://github.com/user-attachments/assets/c57ff30d-a41e-4942-8915-413f846d7f20" />
