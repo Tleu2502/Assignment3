@@ -1,45 +1,48 @@
 public class Experiment {
 
-    Sorter sorter = new Sorter();
-    Searcher searcher = new Searcher();
-
-    public long measureSortTime(int[] arr, String type) {
-        int[] copy = arr.clone();
-        long start = System.nanoTime();
-        if (type.equals("basic")) {
-            sorter.basicSort(copy);
-        } else {
-            sorter.advancedSort(copy);
-        }
-        long end = System.nanoTime();
-        return end - start;
+    public void runTraversals(Graph g) {
+        System.out.println("\n  start test");
+        g.printGraph();
+        g.bfs(0);
+        g.dfs(0);
+        System.out.println("  end  \n");
     }
 
-    public long measureSearchTime(int[] arr, int target) {
-        long start = System.nanoTime();
-        searcher.search(arr, target);
-        long end = System.nanoTime();
-        return end - start;
-    }
+    public void runMultipleTests() {
+        System.out.println("  start \n");
 
-    public void runAllExperiments() {
-        int[] sizes = {10, 100, 1000};
+        int[] sizes = {10, 30, 100};
 
-        for (int i = 0; i < sizes.length; i++) {
-            int size = sizes[i];
+        for (int size : sizes) {
+            Graph g = new Graph();
+            for (int i = 0; i < size; i++) {
+                g.addVertex(new Vertex(i));
+            }
+            for (int i = 0; i < size; i++) {
+                for (int j = 1; j <= 3; j++) {
+                    int to = (i + j) % size;
+                    g.addEdge(i, to);
+                }
+            }
 
-            int[] randomArray = sorter.generateRandomArray(size);
+            System.out.println("Graph  " + size + " vertices:");
 
-            int[] sortedArray = randomArray.clone();
-            sorter.basicSort(sortedArray);
+            long start = System.nanoTime();
+            g.bfs(0);
+            long end = System.nanoTime();
+            System.out.println("BFS Time: " + (end - start) / 1000000.0 + " ms");
 
-            int target = sortedArray[size / 2];
-
-            System.out.println("Size: " + size);
-            System.out.println("Bubble Sort:   " + measureSortTime(randomArray, "basic"));
-            System.out.println("Merge Sort:    " + measureSortTime(randomArray, "advanced"));
-            System.out.println("Binary Search: " + measureSearchTime(sortedArray, target));
+            start = System.nanoTime();
+            g.dfs(0);
+            end = System.nanoTime();
+            System.out.println("DFS Time: " + (end - start) / 1000000.0 + " ms");
             System.out.println();
         }
+
+        System.out.println(" end performence \n");
+    }
+
+    public void printResults() {
+        System.out.println(" complated ");
     }
 }
