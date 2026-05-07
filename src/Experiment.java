@@ -1,15 +1,15 @@
 public class Experiment {
 
     public void runTraversals(Graph g) {
-        System.out.println("\n  start test");
+        System.out.println(" start test");
         g.printGraph();
         g.bfs(0);
         g.dfs(0);
-        System.out.println("  end  \n");
+        System.out.println("  end  ");
     }
 
     public void runMultipleTests() {
-        System.out.println("  start \n");
+        System.out.println("  start ");
 
         int[] sizes = {10, 30, 100};
 
@@ -38,11 +38,6 @@ public class Experiment {
             System.out.println("DFS Time: " + (end - start) / 1000000.0 + " ms");
             System.out.println();
         }
-
-        System.out.println(" end performence \n");
     }
 
-    public void printResults() {
-        System.out.println(" complated ");
-    }
 }

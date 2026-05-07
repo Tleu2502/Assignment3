@@ -4,7 +4,6 @@ public class Main {
 
         experiment.runTraversals(createSmallGraph());
         experiment.runMultipleTests();
-        experiment.printResults();
     }
 
     private static Graph createSmallGraph() {
