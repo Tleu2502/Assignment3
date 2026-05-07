@@ -11,10 +11,14 @@ Task 2
 
 <img width="849" height="641" alt="image" src="https://github.com/user-attachments/assets/c57ff30d-a41e-4942-8915-413f846d7f20" />
 
+
+
 <img width="893" height="590" alt="image" src="https://github.com/user-attachments/assets/9e89b325-21ce-4187-9cdd-a882da32fc60" />
 
 in this part we realize 2 algoritms (DFS and BFS) 
+
 DFS:Breadth-First Search 
+
 BFS:Depth-First Search
 
 Task 3
