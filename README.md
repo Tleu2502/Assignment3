@@ -9,12 +9,11 @@ in this part we create main classes Vertex , Edge and Graph with Adjacency List.
 
 Task 2
 
+DFS
+
 <img width="849" height="641" alt="image" src="https://github.com/user-attachments/assets/c57ff30d-a41e-4942-8915-413f846d7f20" />
 
-
-
-
-
+BFS
 
 <img width="893" height="590" alt="image" src="https://github.com/user-attachments/assets/9e89b325-21ce-4187-9cdd-a882da32fc60" />
 
